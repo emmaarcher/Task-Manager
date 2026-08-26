@@ -7,14 +7,31 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Task Manager</h1>
-    <div class="task">
-        <ul class="listTasks"></ul>
+    <main class="task">
+        <header class="app-header">
+            <p class="eyebrow">Daily focus</p>
+            <h1>Task Manager</h1>
+            <p class="subtitle">Keep the important work moving.</p>
+        </header>
+        <section class="task-section" aria-labelledby="active-heading">
+            <div class="section-heading">
+                <h2 id="active-heading">Active tasks</h2>
+                <span class="task-count" aria-live="polite">0</span>
+            </div>
+            <ul class="listTasks"></ul>
+        </section>
+        <section class="task-section completed-section" aria-labelledby="completed-heading">
+            <div class="section-heading">
+                <h2 id="completed-heading">Completed</h2>
+                <span class="completed-count" aria-live="polite">0</span>
+            </div>
+            <ul class="completedTasks"></ul>
+        </section>
         <form class="getTasks">
-            <input type="text" placeholder="Enter task">
-            <button type="button">Add</button>
+            <input type="text" placeholder="What needs doing?" aria-label="New task" required>
+            <button type="submit">Add task</button>
         </form>
-    </div>
+    </main>
     <script src="main.js" defer></script>
 </body>
 </html>
